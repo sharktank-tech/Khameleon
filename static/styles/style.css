@@ -1,0 +1,161 @@
+/* Estilos para o background da página */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #77BA20;
+}
+
+/* Estilos para a barra lateral */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #0F1309;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+/* Estilos para o conteúdo da barra lateral */
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #FEFEFE;
+    display: block;
+    transition: 0.1s;
+}
+
+/* Estilos para os links da barra lateral */
+.sidebar a:hover {
+    color: #616F64;
+}
+
+/* Estilos para o botão de abrir a barra lateral */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #000;
+    color: #FEFEFE;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50%; /* Deixa o botão redondo */
+    position: fixed;
+    top: 5px;
+    left: 15px;
+    z-index: 2;
+    transition: background-color 0.1s; /* Adiciona uma transição suave na mudança de cor */
+}
+
+/* Estilos para o botão de abrir a barra lateral quando hover */
+.openbtn:hover {
+    background-color: #333;
+}
+
+/* Estilos para o conteúdo da página */
+.content {
+    transition: margin-left .5s;
+    padding: 20px;
+    background-color: #7EC620;
+    min-height: 100vh;
+    margin-left: 50px;
+}
+
+/* Estilos para os botões */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #7EC620;
+    color: #010100;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos específicos para a página "Paredão Liquida" */
+#main {
+    text-align: center;
+    margin-top: 1%;
+    background-color: #010100; /* Fundo */
+    padding: 10px;
+    border-radius: 0px;
+}
+
+h1 {
+    color: #7EC620;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Alinha o h1 ao centro */
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilos para ajustar os parágrafos ao centro */
+.paragraphs-container {
+    text-align: center;
+}
+
+/* Estilos para a barra de pesquisa */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: #FFF; /* Fundo branco */
+    padding: 10px;
+    border-radius: 100px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
+    color: #010100;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para a imagem de logo */
+.logo {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    width: 100px;
+    border-radius: 50%;
+    height: 100px;
+}

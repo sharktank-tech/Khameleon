@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khameleon Execuçôes</title>
+    <link rel="shortcut icon" href="static/images/mk9-squarelogo-1674219211609.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="static/styles/style.css">
+</head>
+<body>
+
+    <img alt='Logo' src="static/images/mk9-squarelogo-1674219211609.jpg" class="logo">
+
+    <button class="openbtn" onclick="toggleNav()">☰</button>
+
+    <!-- Barra lateral -->
+    <div id="mySidebar" class="sidebar">
+        <!-- Botão de adicionar tarefas -->
+        <a href="/add_tarefas">Ambev</a>
+        <!-- Botão de envio de e-mail -->
+        <a href="/enviar_email">Marca-2</a>
+        <!-- Botão para atualizar o bancode dados -->
+        <a href="/base_de_dados">Gerenciar base de dados</a>
+    </div>
+
+    <!-- Conteúdo da página -->
+  <body class="centered">
+    <div id="main">
+      <h1>Paredão da Liquida:</h1>
+      <!-- Barra de pesquisa -->
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Pesquisar...">
+        <button type="button" onclick="pesquisar()">Buscar</button>
+      </div>
+
+      <!-- Área de resultados -->
+      <div class="results-container" id="results-container">
+        <!-- Os resultados serão inseridos dinamicamente aqui -->
+      </div>
+    </div>
+
+    <script>
+      function pesquisar() {
+        // Captura o valor digitado na barra de pesquisa
+        var pesquisa = document.getElementById("search-input").value;
+
+        // Faz uma requisição AJAX para buscar os resultados
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            // Atualiza dinamicamente a área de resultados com os dados recebidos
+            document.getElementById("results-container").innerHTML = this.responseText;
+          }
+        };
+        xhr.open("GET", "/buscar_resultados/" + pesquisa, true);
+        xhr.send();
+      }
+    </script>
+  </body>
+
+    <!-- Script JavaScript para abrir e fechar a barra lateral -->
+    <script>
+        function toggleNav() {
+            var sidebar = document.getElementById("mySidebar");
+            if (sidebar.style.width === "250px") {
+                sidebar.style.width = "0";
+            } else {
+                sidebar.style.width = "250px";
+            }
+        }
+    </script>
+</body>
+</html>

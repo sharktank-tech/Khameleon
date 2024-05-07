@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Base de Dados</title>
+    <style>
+        /* CSS para a página Base de Dados */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #77BA20;
+            text-align: center; /* Centraliza todo o conteúdo na página */
+        }
+
+        /* Estilos para o botão de redirecionamento */
+        .redirect-button {
+            display: inline-block;
+            text-align: left;
+            padding: 10px 20px;
+            background-color: #000100; /* Cor preta */
+            color: #FEFEFE;
+            text-decoration: none; /* Remove o sublinhado padrão */
+            border-radius: 5px;
+            transition: background-color 0.3s ease; /* Adiciona uma transição suave */
+            margin-bottom: 20px; /* Adiciona espaço abaixo do botão */
+        }
+
+        /* Estilos para o título */
+        h1 {
+            color: #00000;
+            font-size: 40px; /* Aumenta o tamanho da fonte */
+            margin-bottom: 20px; /* Adiciona espaço abaixo do título */
+        }
+
+        /* Estilos para o input de arquivo */
+        input[type="file"] {
+            margin: 10px;
+            font-size: 20px; /* Reduz o tamanho da fonte */
+        }
+
+        /* Estilos para o botão de envio */
+        input[type="submit"] {
+            margin: 10px;
+            font-size: 20px; /* Reduz o tamanho da fonte */
+            padding: 10px 20px; /* Adiciona um preenchimento ao botão */
+            background-color: #000100; /* Cor preta */
+            color: #FEFEFE;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Adiciona uma transição suave */
+        }
+
+        /* Estilos para o botão de envio quando hover */
+        input[type="submit"]:hover {
+            background-color: #000050; /* Cor preta mais escura quando hover */
+        }
+    </style>
+</head>
+<body>
+    <a href="/" class="redirect-button">Página inicial</a>
+    <h1>Base de Dados</h1>
+    <form action="/upload_file" method="post" enctype="multipart/form-data">
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="submit" value="Upload" name="submit">
+    </form>
+</body>
+</html>

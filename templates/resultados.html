@@ -1,0 +1,24 @@
+<style>
+  /* CSS para a página resultados.html */
+  .results-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+  }
+
+  .paragraphs-container {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+</style>
+
+{% if data %}
+  <div class="paragraphs-container">
+    <p>Codigo: {{ data[0][0] }}</p>
+    <p>Nome: {{ data[0][1] }}</p>
+    <p>Quantidade: {{ data[0][2] }}</p>
+  </div>
+{% else %}
+  <p>Nenhum resultado encontrado.</p>
+{% endif %}
