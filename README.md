@@ -13,10 +13,3 @@ Este é um projeto de aplicação web para o gerenciamento de informações sobr
 - *Backend:* Python (Flask)
 
 - *Banco de Dados:* SQLite
-
-## Contribuição
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir um issue para relatar bugs, sugestões ou novas funcionalidades. Se desejar contribuir diretamente, abra um pull request e iremos revisá-lo o mais rápido possível.
-
----
-
